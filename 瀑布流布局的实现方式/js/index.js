@@ -16,17 +16,18 @@
         this.render();
     }
     Waterfall.prototype.render = function(){
+        var item = null;
         for(let i = 0,length = this.children.length; i < length; i++){
-            this.children[i].style.width = this.colmunWidth + 'px'
+            item.style.width = this.colmunWidth + 'px'
             if(i < this.colmun){
-                this.children[i].style.left = i*(this.colmunWidth+this.gap) + 'px'
-                this.children[i].style.top = 0;
-                this.heightArr.push(this.children[i].offsetHeight)
+                item.style.left = i*(this.colmunWidth+this.gap) + 'px'
+                item.style.top = 0;
+                this.heightArr.push(item.offsetHeight)
             }else{
                 let index = minIndex(this.heightArr)
-                this.children[i].style.left = index*(this.colmunWidth+this.gap) + 'px'
-                this.children[i].style.top = this.heightArr[index] + this.gap + 'px';
-                this.heightArr[index] += this.children[i].offsetHeight + this.gap;
+                item.style.left = index*(this.colmunWidth+this.gap) + 'px'
+                item.style.top = this.heightArr[index] + this.gap + 'px';
+                this.heightArr[index] += item.offsetHeight + this.gap;
             }
         }
     }
