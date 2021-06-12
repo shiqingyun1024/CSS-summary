@@ -1,5 +1,7 @@
-;(function(){
-    var Waterfall = function(opt){
+// 这个方法采取ES6的语法
+export default class Waterfall{
+    constructor(opt){
+        // 挂载的元素
         this.el =  document.getElementsByClassName(opt.el)[0];
         // colmun 多少列
         this.colmun = opt.colmun;
@@ -12,29 +14,30 @@
         this.children = this.el.getElementsByTagName('div');
         this.init()
     }
-    Waterfall.prototype.init = function(){
+    init(){
         this.render();
     }
-    Waterfall.prototype.render = function(){
+    render(){
         var item = null;
         for(let i = 0,length = this.children.length; i < length; i++){
             item = this.children[i]
+            console.log(item);
             item.style.width = this.colmunWidth + 'px'
             if(i < this.colmun){
                 item.style.left = i*(this.colmunWidth+this.gap) + 'px'
                 item.style.top = 0;
                 this.heightArr.push(item.offsetHeight)
             }else{
-                let index = minIndex(this.heightArr)
+                let index = this.minIndex(this.heightArr)
                 item.style.left = index*(this.colmunWidth+this.gap) + 'px'
                 item.style.top = this.heightArr[index] + this.gap + 'px';
                 this.heightArr[index] += item.offsetHeight + this.gap;
             }
         }
     }
-    // 找出heightArr高度值最小的那个，然后把图片放在高度最小的图片下方
-    function minIndex(heightArr){
-       return heightArr.indexOf(Math.min.apply(null,heightArr))
-    }
-    window.Waterfall = Waterfall;
-})();
+
+    minIndex(heightArr){
+        return heightArr.indexOf(Math.min.apply(null,heightArr))
+     }
+
+}
