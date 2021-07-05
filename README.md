@@ -17,7 +17,7 @@ this.colmunWidth = (this.el.offsetWidth - (this.colmun - 1)*this.gap) / this.col
 先按照顺序放置第一行，然后计算第一行中高度最低的那个元素，然后把第二行第一个元素放置在这个最低的元素下面，以此类推。
 ```
 ### 功能专区
-#### 1、使用transform中的translate实现垂直居中
+#### 1、使用transform中的translate实现垂直居中（垂直居中方法很多，我经常直接用flex布局实现）
 ```
 <!DOCTYPE html>
 <html lang="en">
