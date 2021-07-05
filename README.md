@@ -53,6 +53,6 @@ this.colmunWidth = (this.el.offsetWidth - (this.colmun - 1)*this.gap) / this.col
 </body>
 </html>
 ```
-### 2、所有定位的总结（静态定位、相对定位、绝对定位、固定定位）
+### 2、所有定位的总结（静态定位、相对定位、绝对定位、固定定位、粘性定位）
 ```
 ```
