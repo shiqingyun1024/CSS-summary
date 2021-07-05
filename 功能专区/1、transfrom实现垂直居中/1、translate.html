@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform中的translate实现垂直居中</title>
+    <style>
+        .transParent{
+          position: absolute;
+          top: 200px;
+          left: 200px;
+        }
+        /* translate是相对父级元素运动，百分比是相对于元素自身的宽高 */
+        .transChild{
+           width: 100px;
+           height: 100px;
+           background-color: #2195de;
+           transform: translate(50%,50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="transParent">
+        <div class="transChild"></div>
+    </div>
+</body>
+</html>
