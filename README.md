@@ -53,6 +53,27 @@ this.colmunWidth = (this.el.offsetWidth - (this.colmun - 1)*this.gap) / this.col
 </body>
 </html>
 ```
-### 2、所有定位的总结（静态定位、相对定位、绝对定位、固定定位、粘性定位）
+#### 2、所有定位的总结（静态定位（也就是没有开启定位）、相对定位、绝对定位、固定定位、粘性定位）
 ```
+定位（position）
+   - 定位是一种更加高级的布局手段
+   - 通过定位可以将元素摆放到页面的任意位置
+   - 使用position属性来设置定位
+   可选值
+        static 默认值，元素是静止的，没有开启定位
+        relative 开启元素的相对定位
+        absolute 开启元素的绝对定位
+        fixed 开启元素的固定定位
+        sticky 开启元素的粘性定位
+
+    - 相对定位
+        - 当元素的position属性设置为relative时则开启了元素的相对定位
+        - 相对定位的特点
+          1、元素开启相对定位后，如果不设置偏移量，元素不会发生任何的变化 
+          偏移量（offset） 
+          top：定位元素和定位位置上边的距离。
+          bottom
+          left
+          right  
 ```
+
